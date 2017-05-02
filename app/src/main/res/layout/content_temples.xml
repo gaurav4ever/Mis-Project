@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.gauravpc.mis.temples"
+    tools:showIn="@layout/activity_temples"
+    android:background="#f96a01">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:id="@+id/l1"
+        android:background="#ca5702"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"
+            android:padding="18dp"
+            android:id="@+id/back"
+            android:src="@drawable/back"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Temples"
+            android:layout_weight="0.85"
+            android:textSize="22sp"
+            android:id="@+id/headerText"
+            android:gravity="center_vertical"
+            android:textColor="#fff"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/l1"
+        android:divider="@null"
+        android:background="#f96a01"
+        android:id="@+id/templesList" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loadingLayout"
+        android:layout_centerInParent="true"
+        >
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:indicatorName="LineScalePulseOutIndicator"
+            app:indicatorColor="#fff"
+            android:layout_centerInParent="true"
+            android:id="@+id/avi"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>
